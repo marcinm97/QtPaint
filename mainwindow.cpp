@@ -12,3 +12,18 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+void MainWindow::open(){
+
+}
+void MainWindow::save(){
+
+}
+void MainWindow::penColor(){
+
+}
+void MainWindow::penWidth(){
+
+}
+void MainWindow::about(){
+
+}
