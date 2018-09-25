@@ -4,6 +4,25 @@
 #include <QMainWindow>
 #include <QList>
 #include "scribblearea.h"
+#include <QFile>
+#include <QFileDialog>
+#include <QTextStream>
+#include <QMessageBox>
+#include <QtPrintSupport/QPrinter>
+#include <QtPrintSupport/QPrintDialog>
+#include <QIcon>
+#include <QDebug>
+#include <QFontDialog>
+#include <QFont>
+#include <QColorDialog>
+#include <QColor>
+#include <QPalette>
+#include <QTimer>
+#include <QDateTime>
+#include <QDir>
+#include <QByteArray>
+#include <QInputDialog>
+
 namespace Ui {
 class MainWindow;
 }
@@ -16,7 +35,7 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 protected:
-    //void closeEvent(QCloseEvent* event) override;  // if the user tries to shut down the app without saving
+    void closeEvent(QCloseEvent* event) override;  // if the user tries to shut down the app without saving
     // we will protect against
 private slots:
     void open();
@@ -30,7 +49,7 @@ private:
     void createMenus();
     bool maybeSave();
     bool saveFile(const QByteArray& fileFormat);
-    ScribbleArea* scribledArea;
+    ScribbleArea* scribbledArea;
     QMenu* saveAsMenu;
     QMenu* fileMenu;
     QMenu* optionMenu;
