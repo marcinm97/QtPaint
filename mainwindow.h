@@ -22,6 +22,7 @@
 #include <QDir>
 #include <QByteArray>
 #include <QInputDialog>
+#include <QImageWriter>
 
 namespace Ui {
 class MainWindow;
@@ -53,14 +54,16 @@ private:
     QMenu* saveAsMenu;
     QMenu* fileMenu;
     QMenu* optionMenu;
-    QMenu* helMenu;
+    QMenu* helpMenu;
     QAction* openAction;
     QList<QAction*> saveAsActs;
     QAction* printAct;
     QAction* penColorAct;
+    QAction* penWidthAct;
     QAction* clearScreenAct;
     QAction* aboutAct;
-    QAction* acoutQtAct;
+    QAction* aboutQtAct;
+    QAction* exitAct;
 };
 
 #endif // MAINWINDOW_H
